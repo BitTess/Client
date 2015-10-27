@@ -13,12 +13,13 @@ This assumes that you already have a apache server running and can add the two e
 
 When you have that set up you need to add two JavaScript files to your webpage - BT.js and peer.js
 See the minimal file for an example.
-If you would like to intergrate it into another site check out the index.php file.
-The first fet lines has the following line
+If you would like to integrate it into another site check out the index.php file.
+The first few lines has the following line
 ```
 if((strpos($_SERVER["HTTP_USER_AGENT"], 'Chrome')!== false|| strpos($_SERVER["HTTP_USER_AGENT"], 'Firefox')!== false)&&strpos($_SERVER["HTTP_USER_AGENT"], 'Edge')== false&&
 ```
 This will determine if the user is running a BitTess capable client (chrome,firefox, opera or edge) and send them the client or if they have a legacy browser it will host the page as normal.
+The remainder of that line determines if the user is accessing the page from a mobile device 
 
 This file also has the peerjs and BT.js files minified and stored within the single file to speed up processing and reduce connections. 
 
